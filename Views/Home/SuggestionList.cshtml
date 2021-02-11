@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Suggestion List";
+}
+
+@model IEnumerable<Assignment4.Models.Addition>
+
+<div>
+    <h2>Here are the restaurants currently on the list:</h2>
+
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Restaurant</th><th>Favorite Dish</th><th>Phone</th></tr>
+        </thead>
+
+        <tbody>
+            @*
+                Iterate through list of suggestions 
+                
+                IT THROWS AN ERROR HERE. I HAVE NO IDEA WHY. I HAVE IENUMERABLES AND EVERYTHING. 
+                
+                I have worked on this specific error for two hours. No clue what is going on here.
+            *@
+
+            @foreach (Assignment4.Models.Addition i in Model)
+            {
+                <tr>
+                    <td>@i.Name</td>
+                    <td>@i.RestName</td>
+                    <td>@i.FavDish</td>
+                    <td>@i.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

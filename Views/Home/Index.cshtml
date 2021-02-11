@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Welcome to the Top 5 Restaurants in Provo!";
+}
+
+@model IEnumerable<string>
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Top 5 Restaurants</title>
+    <meta name="viewport" content="width" />
+</head>
+
+<body>
+    <br />
+    <div class="text-center">
+        <h4>This site shows the Top 5 Restaurants in Provo, UT, according to J.R. Smith</h4>
+    </div>
+    <br />
+    <div class="text-center">
+        <img src="~/img/chefskiss.jpg" width="700" />
+        <br />
+        <br />
+        @*View restaurant page*@
+        <a class="btn-primary" asp-action="SuggestionList">View Suggestions</a>
+    </div>
+    <br />
+    <ul>
+        @*Iterates through array of restaurants*@
+        @foreach (string i in Model)
+        {
+            <li class="list-group-item">@i</li>
+        }
+    </ul>
+</body>
+
+</html>

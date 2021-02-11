@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Suggestions";
+}
+
+@model Assignment4.Models.Addition
+
+<head>
+    <title>Top 5 Restaurants</title>
+    <meta name="viewport" content="width" />
+</head>
+
+<form asp-action="SuggestionList" method="post">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+        <br />
+        <br />
+    </div>
+    <div>
+        <label asp-for="RestName">Restaurant:</label>
+        <input asp-for="RestName" />
+        <br />
+        <br />
+    </div>
+    <div>
+        <label asp-for="FavDish">Favorite Dish:</label>
+        <input asp-for="FavDish" />
+        <br />
+        <br />
+    </div>
+    <div>
+        <label asp-for="Phone">Phone:</label>
+        <input asp-for="Phone" />
+        <br />
+        <br />
+    </div>
+
+    <button type="submit">Submit Suggestion</button>
+    <br />
+    <br />
+
+    <div asp-validation-summary="All"></div>
+</form>
